@@ -1,4 +1,5 @@
 import { Search, MessageSquare, Calendar, Cog } from "lucide-react";
+import { ScrollReveal, StaggerContainer, StaggerItem } from "./ScrollReveal";
 
 const services = [
   {
@@ -38,7 +39,7 @@ const ServicesSection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+        <ScrollReveal className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
             Nos Solutions
           </span>
@@ -50,47 +51,46 @@ const ServicesSection = () => {
             Nos agents intelligents sont conçus pour agir, comprendre et interagir de manière autonome. 
             Chaque agent est pensé comme un collaborateur numérique intégré à vos outils existants.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <StaggerContainer className="grid md:grid-cols-2 gap-6 lg:gap-8" staggerDelay={0.15}>
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-500 card-glow hover:shadow-xl"
-            >
-              {/* Hover Glow */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-blue-500/20 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-7 h-7 text-primary" />
-                </div>
+            <StaggerItem key={index}>
+              <div className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-500 card-glow hover:shadow-xl h-full">
+                {/* Hover Glow */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-blue-500/20 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-7 h-7 text-primary" />
+                  </div>
 
-                {/* Content */}
-                <h3 className="font-heading text-xl lg:text-2xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {service.description}
-                </p>
+                  {/* Content */}
+                  <h3 className="font-heading text-xl lg:text-2xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
 
-                {/* Features */}
-                <div className="flex flex-wrap gap-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <span
-                      key={featureIndex}
-                      className="px-3 py-1 text-sm bg-secondary/50 text-muted-foreground rounded-full border border-border/50"
-                    >
-                      {feature}
-                    </span>
-                  ))}
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <span
+                        key={featureIndex}
+                        className="px-3 py-1 text-sm bg-secondary/50 text-muted-foreground rounded-full border border-border/50"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
