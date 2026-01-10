@@ -72,7 +72,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact-form" className="py-24 lg:py-32 relative overflow-hidden">
+    <section
+      id="contact-form"
+      className="py-24 lg:py-32 relative overflow-hidden"
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/10 to-background" />
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -86,12 +89,12 @@ const ContactSection = () => {
               Contact
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Parlons de votre{" "}
-              <span className="gradient-text">projet</span>
+              Parlons de votre <span className="gradient-text">projet</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Vous avez un projet d'automatisation ou d'intégration d'agents IA ? 
-              Contactez-nous pour en discuter. Notre équipe vous répondra sous 24h.
+              Vous avez un projet d'automatisation ou d'intégration d'agents IA
+              ? Contactez-nous pour en discuter. Notre équipe vous répondra sous
+              24h.
             </p>
 
             <div className="space-y-6">
@@ -101,8 +104,11 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:contact@agentia.fr" className="text-foreground font-medium hover:text-primary transition-colors">
-                    contact@agentia.fr
+                  <a
+                    href="mailto:contact@agentia.fr"
+                    className="text-foreground font-medium hover:text-primary transition-colors"
+                  >
+                    contact@ghali.cloud
                   </a>
                 </div>
               </div>
@@ -112,8 +118,10 @@ const ContactSection = () => {
                   <MessageSquare className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Réponse garantie</p>
-                  <p className="text-foreground font-medium">Sous 24 heures</p>
+                  <p className="text-sm text-muted-foreground">
+                    Réponse garantie
+                  </p>
+                  <p className="text-foreground font-medium">Sous 12 heures</p>
                 </div>
               </div>
             </div>
@@ -121,63 +129,81 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <ScrollReveal direction="right" delay={0.2}>
-            <div className="p-8 rounded-2xl bg-card border border-border/50 card-glow">
+            <div className="p-8 bg-card border rounded-none card-glow">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Name Field */}
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-foreground flex items-center gap-2">
+                  <label
+                    htmlFor="name"
+                    className="text-sm font-medium text-foreground flex items-center gap-2"
+                  >
                     <User className="w-4 h-4 text-muted-foreground" />
                     Nom complet *
                   </label>
                   <Input
                     id="name"
-                    placeholder="Jean Dupont"
-                    className="bg-secondary/50 border-border/50 focus:border-primary/50"
+                    placeholder="mohammed chihab"
+                    className="bg-secondary/50 rounded-none focus:border-primary/50"
                     {...register("name")}
                   />
                   {errors.name && (
-                    <p className="text-sm text-destructive">{errors.name.message}</p>
+                    <p className="text-sm text-destructive">
+                      {errors.name.message}
+                    </p>
                   )}
                 </div>
 
                 {/* Email Field */}
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-foreground flex items-center gap-2">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-medium text-foreground flex items-center gap-2"
+                  >
                     <Mail className="w-4 h-4 text-muted-foreground" />
                     Email *
                   </label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="jean@entreprise.fr"
-                    className="bg-secondary/50 border-border/50 focus:border-primary/50"
+                    placeholder="mohammed@gali.cloud"
+                    className="bg-secondary/50 rounded-none focus:border-primary/50"
                     {...register("email")}
                   />
                   {errors.email && (
-                    <p className="text-sm text-destructive">{errors.email.message}</p>
+                    <p className="text-sm text-destructive">
+                      {errors.email.message}
+                    </p>
                   )}
                 </div>
 
                 {/* Company Field */}
                 <div className="space-y-2">
-                  <label htmlFor="company" className="text-sm font-medium text-foreground flex items-center gap-2">
+                  <label
+                    htmlFor="company"
+                    className="text-sm font-medium text-foreground flex items-center gap-2"
+                  >
                     <Building2 className="w-4 h-4 text-muted-foreground" />
                     Entreprise
                   </label>
                   <Input
                     id="company"
                     placeholder="Nom de votre entreprise"
-                    className="bg-secondary/50 border-border/50 focus:border-primary/50"
+                    className="bg-secondary/50 rounded-none focus:border-primary/50"
                     {...register("company")}
                   />
                   {errors.company && (
-                    <p className="text-sm text-destructive">{errors.company.message}</p>
+                    <p className="text-sm text-destructive">
+                      {errors.company.message}
+                    </p>
                   )}
                 </div>
 
                 {/* Message Field */}
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-foreground flex items-center gap-2">
+                  <label
+                    htmlFor="message"
+                    className="text-sm font-medium text-foreground flex items-center gap-2"
+                  >
                     <MessageSquare className="w-4 h-4 text-muted-foreground" />
                     Message *
                   </label>
@@ -185,11 +211,13 @@ const ContactSection = () => {
                     id="message"
                     placeholder="Décrivez votre projet ou vos besoins en agents IA..."
                     rows={5}
-                    className="bg-secondary/50 border-border/50 focus:border-primary/50 resize-none"
+                    className="bg-secondary/50 rounded-none focus:border-primary/50 resize-none"
                     {...register("message")}
                   />
                   {errors.message && (
-                    <p className="text-sm text-destructive">{errors.message.message}</p>
+                    <p className="text-sm text-destructive">
+                      {errors.message.message}
+                    </p>
                   )}
                 </div>
 
@@ -198,12 +226,12 @@ const ContactSection = () => {
                   type="submit"
                   variant="hero"
                   size="lg"
-                  className="w-full"
+                  className="w-full rounded-none px-3"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-md animate-spin" />
                       Envoi en cours...
                     </>
                   ) : (
@@ -215,7 +243,8 @@ const ContactSection = () => {
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  En soumettant ce formulaire, vous acceptez notre politique de confidentialité.
+                  En soumettant ce formulaire, vous acceptez notre politique de
+                  confidentialité.
                 </p>
               </form>
             </div>
