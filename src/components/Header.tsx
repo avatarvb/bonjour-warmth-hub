@@ -15,40 +15,40 @@ const Header = () => {
             <div className="w-10 h-10 flex items-center justify-center ">
               <BotMessageSquare className="w-8 h-8 decoration-amber-100" />
             </div>
-            <span className="font-heading font-bold text-xl text-foreground">
-              <Link to={"/"}>ghali.cloud</Link>
+            <span className="text-xl text-foreground font-thin">
+              <Link to={"/"}>Ghali.cloud</Link>
             </span>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-4">
             <Link
               to={"/solutions"}
-              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm"
             >
               Solutions
             </Link>
             {/* <a
               href="/solutions"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm"
             > 
               Solutions
             </a>*/}
             <a
-              href="#approach"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              href="/#approach"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm"
             >
               Approche
             </a>
             <a
-              href="#security"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              href="/#security"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm"
             >
               Sécurité
             </a>
             <a
-              href="#contact"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+              href="/#contact"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm"
             >
               Contact
             </a>
@@ -56,6 +56,13 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block">
+            <a
+              href="tel:+212610061591"
+              className="text-sm  text-body hover:underline mr-2"
+            >
+              (+212) 6 10 06 15 91
+            </a>
+
             <Link
               to="/solutions"
               className="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
@@ -87,19 +94,19 @@ const Header = () => {
               >Solutions</a> */}
               <Link to={"/solutions"}>Solutions</Link>
               <a
-                href="#approach"
+                href="/#approach"
                 className="text-muted-foreground hover:text-foreground transition-colors py-2"
               >
                 Approche
               </a>
               <a
-                href="#security"
+                href="/#security"
                 className="text-muted-foreground hover:text-foreground transition-colors py-2"
               >
                 Sécurité
               </a>
               <a
-                href="#contact"
+                href="/#contact"
                 className="text-muted-foreground hover:text-foreground transition-colors py-2"
               >
                 Contact

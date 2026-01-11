@@ -100,13 +100,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center focus-within:ring-4 focus-within:ring-neutral-tertiary-soft font-thin capitalize"
           >
             {/* <Button variant="hero" className="group rounded-none px-3"></Button> */}
 
             <Link
               to="/solutions"
-              className="text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+              className=" text-body bg-neutral-primary-soft border border-default hover:bg-neutral-secondary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary-soft shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
             >
               Découvrir nos solutions
               <Compass className="w-5 h-5 group-hover:translate-x-1 transition-transform float-end ml-2" />

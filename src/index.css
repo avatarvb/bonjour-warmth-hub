@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 @layer base {
   :root {
     --background: 222 47% 6%;
     --foreground: 210 40% 98%;
+    --font-roboto: "Roboto", sans-serif;
 
     --card: 222 47% 8%;
     --card-foreground: 210 40% 98%;
@@ -37,11 +39,27 @@
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%), hsl(220 90% 56%));
-    --gradient-accent: linear-gradient(135deg, hsl(35 100% 55%), hsl(20 100% 60%));
-    --gradient-glow: radial-gradient(ellipse at center, hsl(199 89% 48% / 0.15), transparent 70%);
-    --gradient-hero: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 4%) 100%);
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(199 89% 48%),
+      hsl(220 90% 56%)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(35 100% 55%),
+      hsl(20 100% 60%)
+    );
+    --gradient-glow: radial-gradient(
+      ellipse at center,
+      hsl(199 89% 48% / 0.15),
+      transparent 70%
+    );
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsl(222 47% 6%) 0%,
+      hsl(222 47% 4%) 100%
+    );
+
     --shadow-glow: 0 0 60px hsl(199 89% 48% / 0.2);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
     --shadow-button: 0 4px 20px hsl(199 89% 48% / 0.3);
@@ -86,11 +104,18 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: "Roboto", sans-serif !important;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100 !important;
   }
 }
 
@@ -118,8 +143,10 @@
   }
 
   .grid-pattern {
-    background-image: 
-      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+    background-image: linear-gradient(
+        hsl(var(--border) / 0.3) 1px,
+        transparent 1px
+      ),
       linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
     background-size: 60px 60px;
   }
@@ -149,7 +176,8 @@
   }
 
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -158,7 +186,8 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.4;
     }
     50% {

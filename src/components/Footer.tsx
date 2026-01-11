@@ -21,19 +21,19 @@ const Footer = () => {
               Solutions
             </Link>
             <a
-              href="#approach"
+              href="/#approach"
               className="text-muted-foreground hover:text-foreground transition-colors text-sm"
             >
               Approche
             </a>
             <a
-              href="#security"
+              href="/#security"
               className="text-muted-foreground hover:text-foreground transition-colors text-sm"
             >
               Sécurité
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="text-muted-foreground hover:text-foreground transition-colors text-sm"
             >
               Contact
